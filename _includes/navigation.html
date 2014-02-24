@@ -1,5 +1,16 @@
       <ul class="nav nav-tabs">
-        {% if page.title == "Lund-Chaix Consulting" %}<li class="active">{% else %}<li>{% endif %}<a href="/">Home</a></li>
-        {% if page.title == "About" %}<li class="active">{% else %}<li>{% endif %}<a href="/about.html">About</a></li>
-        {% if page.title == "" %}<li class="active">{% else %}<li>{% endif %}<a href="#">More stuff</a></li>
+        {% for item in site.pages %}
+          {% if page.title == item.title %}<li class="active">{% else %}<li>{% endif %}<a href="{{ item.url}} ">{{ item.title }}</a></li>
+        {% endfor %}
       </ul>
+
+      <!-- div>
+        <pre>
+        {% for item in site.pages %}
+          {% if item.url == page.url %}
+            ACTIVE
+          {% endif %}
+          page: {{ item.url }} {{ item.title }}
+        {% endfor %}
+        </pre>
+      </div-->
