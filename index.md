@@ -1,5 +1,5 @@
 ---
 layout: front
-title: Lund-Chaix Consulting
+title: Home
 ---
 #Welcome
