@@ -1,5 +1,5 @@
       <ul class="nav nav-tabs">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">More stuff</a></li>
+        {% if page.title == "Lund-Chaix Consulting" %}<li class="active">{% else %}<li>{% endif %}<a href="/">Home</a></li>
+        {% if page.title == "About" %}<li class="active">{% else %}<li>{% endif %}<a href="/about.html">About</a></li>
+        {% if page.title == "" %}<li class="active">{% else %}<li>{% endif %}<a href="#">More stuff</a></li>
       </ul>
